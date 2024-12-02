@@ -7,7 +7,16 @@ export default function LoginForm() {
   return (
     <div className='flex flex-col items-center gap-4 space-y-3'>
       <div className='w-full flex-1 rounded-lg border bg-card p-4 shadow-md md:w-96'>
-        <h1 className='my-6 text-2xl font-bold'>Please log in to continue.</h1>
+        <p className='my-6 text-lg font-bold text-center w-full'>
+          <span>Welcome to</span>
+          <br />
+          <strong className='text-primary'>SmartCrossCulturalLearning</strong>
+        </p>
+        <img src='/images/logo.jpg' alt='' className='size-32 mx-auto' />
+
+        <h1 className='my-6 text-2xl font-bold text-center w-full'>
+          Please log in to continue
+        </h1>
 
         <LoginWithCredentialForm />
 
