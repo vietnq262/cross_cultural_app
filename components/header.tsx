@@ -8,7 +8,7 @@ import { AppIcon } from '@/components/ui/icons';
 import { UserMenu } from '@/components/user-menu';
 
 import GlobalAssistantToggleButton from './global-assistant-toogle-button';
-import { ThemeToggle } from './theme-toggle';
+// import { ThemeToggle } from './theme-toggle';
 
 export function Header(props: { showAssistantToggle?: boolean }) {
   return (
@@ -29,7 +29,7 @@ async function UserOrLogin(props: { showAssistantToggle?: boolean }) {
         <Link href='/'>
           <AppIcon className='size-6' />
         </Link>
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
         <Link className='hidden md:block text-sm' href='/'>
           Essays
         </Link>
@@ -50,7 +50,7 @@ async function UserOrLogin(props: { showAssistantToggle?: boolean }) {
         <Link href='/'>
           <AppIcon className='size-6' />
         </Link>
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
         <div className='flex-1' />
         <Button variant='link' asChild className='-ml-2'>
           <Link href='/auth/sign-in'>Login</Link>

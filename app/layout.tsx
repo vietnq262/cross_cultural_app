@@ -61,9 +61,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <GlobalDialogProvider>
           <Providers
             attribute='class'
-            defaultTheme='system'
-            enableSystem
-            disableTransitionOnChange
+            forcedTheme='light'
           >
             <AppProvider>
               <NuqsAdapter>{children}</NuqsAdapter>
