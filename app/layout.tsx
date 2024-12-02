@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     ? new URL(`https://${process.env.VERCEL_URL}`)
     : undefined,
   title: {
-    default: 'Cross Cultural Education',
-    template: `%s - Cross Cultural Education`,
+    default: 'Smart Cross Cultural Learning',
+    template: `%s - Smart Cross Cultural Learning`,
   },
-  description: 'An AI-powered app for classrooms.',
+  description: 'Smart Cross Cultural Learning',
   icons: {
     icon: '/icons/favicon.ico',
     shortcut: '/icons/favicon-16x16.png',
