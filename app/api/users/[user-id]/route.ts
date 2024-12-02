@@ -13,8 +13,6 @@ export async function GET(
 ) {
   const userId = params['user-id'];
 
-  console.log('userId', userId);
-
   if (!userId) {
     return NextResponse.json(
       { error: 'You must provide a userId.' },

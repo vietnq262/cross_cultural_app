@@ -33,7 +33,7 @@ export const useFFmpeg = () => {
 
       setLog('');
       ffmpeg.on('log', ({ message }) => {
-        console.log(message);
+        // console.log(message);
         setLog((log) => log + '\n' + message);
       });
 

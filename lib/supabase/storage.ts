@@ -11,7 +11,6 @@ async function uploadFileToSupabaseStorage(
     .upload(file.name, file);
 
   if (error) {
-    console.log(error);
     throw new Error(`Failed to upload document: ${error.message}`);
   }
 

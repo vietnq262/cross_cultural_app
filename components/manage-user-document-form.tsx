@@ -109,7 +109,6 @@ function ManageUserDocumentForm(props: ManageUserDocumentFormProps) {
       //   setUpdateProgressMessage(progressMessage);
       // }
       const file = data.documents?.[0]?.file;
-      console.log(file);
 
       throw 'unimplemented';
 
