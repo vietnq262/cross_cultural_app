@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import {
+  FileBadgeIcon,
   FileIcon,
   LogOut,
   MessageCircleIcon,
@@ -73,6 +74,17 @@ export function UserMenu({ user }: UserMenuProps) {
             <DropdownMenuItem>
               <MessageCircleIcon className='mr-2 size-4' />
               <span>AI Chatbot</span>
+            </DropdownMenuItem>
+          </Link>
+
+          <DropdownMenuSeparator />
+          <Link
+            href={`/?author=${user!.id}`}
+            className='cursor-pointer'
+          >
+            <DropdownMenuItem>
+              <FileBadgeIcon className='mr-2 size-4' />
+              <span>My essays</span>
             </DropdownMenuItem>
           </Link>
 

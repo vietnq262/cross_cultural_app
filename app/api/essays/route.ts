@@ -47,8 +47,8 @@ export async function GET(req: NextRequest) {
         body,
         conclusion,
         videos!inner (
-          id, 
-          name, 
+          id,
+          name,
           tags
         )
       `,
@@ -71,6 +71,16 @@ export async function GET(req: NextRequest) {
     }
     if (authorId) {
       query = query.eq('created_by', authorId);
+    }
+
+    query = query.order('created_at', { ascending: false });
+
+    // hide all essays before 2025-02-19 00:00 GMT-0, except for admin and current user searching for their own essays
+    const isAdmin = session.user.is_admin;
+    const isSearchingForOwnEssays = authorId === session.user.id;
+    const limitPreviousEssays = !(isAdmin || isSearchingForOwnEssays);
+    if (limitPreviousEssays) {
+      query = query.gte('created_at', '2025-02-19');
     }
 
     const { data: essays, count, error } = await query;
