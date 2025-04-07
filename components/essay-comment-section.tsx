@@ -82,9 +82,9 @@ function CommentList({
         >
           <div className='flex items-center mb-2 gap-2'>
             <EssayAuthorInfo userId={comment.createdBy} />
-            <p className='text-xs text-gray-500'>
+            {/* <p className='text-xs text-gray-500'>
               {new Date(comment.createdAt).toLocaleString()}
-            </p>
+            </p> */}
           </div>
           <p className='text-gray-700 mb-2'>{comment.content}</p>
         </li>
